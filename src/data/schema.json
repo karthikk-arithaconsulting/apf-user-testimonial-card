@@ -1,0 +1,168 @@
+{
+  "$schema": "https://brikcase.s3.amazonaws.com/apf/project.schema.json",
+  "pages": [
+    {
+      "pageName": "page 1",
+      "pageData": [
+        {
+          "type": "grid",
+          "style": {},
+          "cols": [
+            {
+              "colspan": 12,
+              "style": {},
+              "colData": [
+                {
+                  "brikId": "@apf/basic-card",
+                  "brikName": "",
+                  "editorId": "e2719e38616b5c13bfe15a23f383582050a906d7861a4aae0a56fc72db0fda09",
+                  "version": "1.0.0",
+                  "editable": true,
+                  "style": {
+                    "font": {
+                      "family": "",
+                      "size": "",
+                      "style": "",
+                      "color": "",
+                      "weight": ""
+                    },
+                    "backgroundColor": "",
+                    "color": ""
+                  },
+                  "data": [
+                    {
+                      "content": {
+                        "value": "Technology",
+                        "label": "Title",
+                        "type": "Maintext",
+                        "for": "title",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    },
+                    {
+                      "content": {
+                        "value": "John Doe",
+                        "label": "Author",
+                        "type": "Maintext",
+                        "for": "author",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    },
+                    {
+                      "content": {
+                        "value": "Software Engineer",
+                        "label": "Author Subtitle",
+                        "type": "Maintext",
+                        "for": "authorSubtitle",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    },
+                    {
+                      "content": {
+                        "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                        "label": "Description",
+                        "type": "Maintext",
+                        "for": "description",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    },
+                    {
+                      "content": {
+                        "value": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+                        "label": "Cover",
+                        "type": "Maintext",
+                        "for": "cover",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    },
+                    {
+                      "content": {
+                        "value": false,
+                        "label": "Reverse",
+                        "type": "Maintext",
+                        "for": "reverse",
+                        "link": ""
+                      },
+                      "style": {
+                        "font": {
+                          "family": "",
+                          "size": "",
+                          "style": "",
+                          "color": "",
+                          "weight": ""
+                        },
+                        "backgroundColor": ""
+                      },
+                      "editable": true,
+                      "display": "block"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

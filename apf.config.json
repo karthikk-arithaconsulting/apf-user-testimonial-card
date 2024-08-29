@@ -1,0 +1,13 @@
+{
+  "$schema": "https://brikcase.s3.amazonaws.com/apf/config.schema.json",
+  "root": true,
+  "brikId": "@apf/user-testimonial-card",
+  "version": "1.0.0",
+  "brikName": "@apf/user-testimonial-card",
+  "author": "bhaireshm <bhairesh@arithaconsulting.com>",
+  "published": false,
+  "categories": [
+    "basic"
+  ],
+  "packageManager": "pnpm"
+}
