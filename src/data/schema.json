@@ -11,10 +11,12 @@
             {
               "colspan": 12,
               "style": {},
+              "type": "col",
               "colData": [
                 {
-                  "brikId": "@apf/basic-card",
-                  "brikName": "",
+                  "brikId": "@apf/testimonial-card",
+                  "type": "brik",
+                  "brikName": "Card",
                   "editorId": "e2719e38616b5c13bfe15a23f383582050a906d7861a4aae0a56fc72db0fda09",
                   "version": "1.0.0",
                   "editable": true,
@@ -34,7 +36,7 @@
                       "content": {
                         "value": "Technology",
                         "label": "Title",
-                        "type": "Maintext",
+                        "type": "title",
                         "for": "title",
                         "link": ""
                       },
@@ -48,6 +50,7 @@
                         },
                         "backgroundColor": ""
                       },
+                      "id": "1",
                       "editable": true,
                       "display": "block"
                     },
@@ -55,7 +58,7 @@
                       "content": {
                         "value": "John Doe",
                         "label": "Author",
-                        "type": "Maintext",
+                        "type": "text",
                         "for": "author",
                         "link": ""
                       },
@@ -69,6 +72,7 @@
                         },
                         "backgroundColor": ""
                       },
+                      "id": "2",
                       "editable": true,
                       "display": "block"
                     },
@@ -76,7 +80,7 @@
                       "content": {
                         "value": "Software Engineer",
                         "label": "Author Subtitle",
-                        "type": "Maintext",
+                        "type": "title",
                         "for": "authorSubtitle",
                         "link": ""
                       },
@@ -90,6 +94,7 @@
                         },
                         "backgroundColor": ""
                       },
+                      "id": "3",
                       "editable": true,
                       "display": "block"
                     },
@@ -97,7 +102,7 @@
                       "content": {
                         "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                         "label": "Description",
-                        "type": "Maintext",
+                        "type": "text",
                         "for": "description",
                         "link": ""
                       },
@@ -112,35 +117,15 @@
                         "backgroundColor": ""
                       },
                       "editable": true,
-                      "display": "block"
+                      "display": "block",
+                      "id": "4"
                     },
                     {
                       "content": {
                         "value": "https://images.unsplash.com/photo-1602080858428-57174f9431cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-                        "label": "Cover",
-                        "type": "Maintext",
+                        "label": "User image",
+                        "type": "img",
                         "for": "cover",
-                        "link": ""
-                      },
-                      "style": {
-                        "font": {
-                          "family": "",
-                          "size": "",
-                          "style": "",
-                          "color": "",
-                          "weight": ""
-                        },
-                        "backgroundColor": ""
-                      },
-                      "editable": true,
-                      "display": "block"
-                    },
-                    {
-                      "content": {
-                        "value": false,
-                        "label": "Reverse",
-                        "type": "Maintext",
-                        "for": "reverse",
                         "link": ""
                       },
                       "style": {
@@ -164,5 +149,11 @@
         }
       ]
     }
-  ]
+  ],
+  "template": {
+    "id": "",
+    "name": "",
+    "category": "",
+    "description": ""
+  }
 }

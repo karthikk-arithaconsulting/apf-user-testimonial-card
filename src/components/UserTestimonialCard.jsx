@@ -14,16 +14,34 @@ import { Avatar, Box, Card, Group, Text } from "@apf/core";
  * @param {string} props.data.reverse - Swap the card direction.
  */
 export default function UserTestimonialCard(props) {
-  const {
-    title = "",
-    author = "",
-    authorSubtitle = "",
-    description = "",
-    cover = "",
-    reverse = false,
-    // eslint-disable-next-line react/prop-types
-  } = { ...props?.data };
+  let titleObj;
+  let descObj;
+  let nameObj;
+  let authorSubtitle;
+  let userImg;
 
+  props.data?.data?.forEach((eleobj) => {
+    if (eleobj?.content?.for === "title") {
+      titleObj = eleobj;
+    }
+    // if (eleobj?.content?.type === "text") {
+    //   textObj = eleobj;
+    // }
+    if (eleobj?.content?.for === "author") {
+      nameObj = eleobj;
+    }
+    if (eleobj?.content?.for === "authorSubtitle") {
+      authorSubtitle = eleobj;
+    }
+    if (eleobj?.content?.for === "description") {
+      descObj = eleobj;
+    }
+    if (eleobj?.content?.type === "img") {
+      userImg = eleobj;
+    }
+  });
+  const reverse = false;
+  // console.log("data", titleObj, props?.data?.data);
   return (
     <Card withBorder radius="md" p={0}>
       <Group
@@ -32,26 +50,34 @@ export default function UserTestimonialCard(props) {
         p="md"
         style={{ flexDirection: reverse ? "row-reverse" : "row" }}
       >
-        <Avatar src={cover} size={94} />
+        {userImg?.display === "block" && (
+          <Avatar src={userImg?.content?.value} size={94} />
+        )}
         <Box px="md">
-          {title ? (
-            <Text tt="uppercase" c="dimmed" fw={700} size="xs">
-              {title}
+          {titleObj?.display === "block" ? (
+            <Text
+              tt="uppercase"
+              c="dimmed"
+              fw={700}
+              size="xs"
+              id={titleObj?.id}
+            >
+              {titleObj?.content?.value}
             </Text>
           ) : null}
-          {description ? (
-            <Text mt="xs" mb="md">
-              {description}
+          {descObj?.display === "block" ? (
+            <Text mt="xs" id={descObj?.id}>
+              {descObj?.content?.value}
             </Text>
           ) : null}
-          {author ? (
-            <Box wrap="nowrap" gap="xs">
-              <Text size="sm" fw={500}>
-                {author}
+          {nameObj?.display === "block" ? (
+            <Box wrap="nowrap" gap="xs" mt="md">
+              <Text size="sm" fw={500} id={nameObj?.id}>
+                {nameObj?.content?.value}
               </Text>
-              {authorSubtitle ? (
+              {authorSubtitle?.display === "block" ? (
                 <Text c="dimmed" fz="xs">
-                  {authorSubtitle}
+                  {authorSubtitle?.content?.value}
                 </Text>
               ) : null}
             </Box>

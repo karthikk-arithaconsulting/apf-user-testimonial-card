@@ -15,9 +15,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apf/brik-wrapper": "^0.1.6",
+    "@apf/brik-wrapper": "^0.2.6",
     "@apf/core": "^0.0.21",
-    "@apf/playground": "1.0.14-rc-48",
+    "@apf/playground": "1.0.14-rc-49",
     "@tabler/icons-react": "^3.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
