@@ -3,11 +3,12 @@
   "root": true,
   "brikId": "@apf/user-testimonial-card",
   "version": "1.0.0",
-  "brikName": "@apf/user-testimonial-card",
-  "author": "bhaireshm <bhairesh@arithaconsulting.com>",
+  "brikName": "user-testimonial-card",
+  "author": "karthik.k <karthik.k@arithaconsulting.com>",
   "published": false,
-  "categories": [
-    "basic"
-  ],
-  "packageManager": "pnpm"
+  "categories": ["basic"],
+  "packageManager": "pnpm",
+  "build": {
+    "outDir": "dist"
+  }
 }

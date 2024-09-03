@@ -1,6 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
-import { Avatar, Box, Card, Group, Text } from "@apf/core";
+import { Box, Card, Group, Text } from "@apf/core";
+import { Image } from "@apf/core";
 
 /**
  * UserTestimonialCard is a component that renders a user testimonial card.
@@ -24,9 +26,6 @@ export default function UserTestimonialCard(props) {
     if (eleobj?.content?.for === "title") {
       titleObj = eleobj;
     }
-    // if (eleobj?.content?.type === "text") {
-    //   textObj = eleobj;
-    // }
     if (eleobj?.content?.for === "author") {
       nameObj = eleobj;
     }
@@ -41,7 +40,6 @@ export default function UserTestimonialCard(props) {
     }
   });
   const reverse = false;
-  // console.log("data", titleObj, props?.data?.data);
   return (
     <Card withBorder radius="md" p={0}>
       <Group
@@ -51,32 +49,64 @@ export default function UserTestimonialCard(props) {
         style={{ flexDirection: reverse ? "row-reverse" : "row" }}
       >
         {userImg?.display === "block" && (
-          <Avatar src={userImg?.content?.value} size={94} />
+          <Image
+            radius="50%"
+            id={userImg?.id}
+            src={userImg?.content?.src}
+            h={userImg?.style?.height || "100"}
+            w={userImg?.style?.width || "100"}
+          />
         )}
         <Box px="md">
           {titleObj?.display === "block" ? (
             <Text
               tt="uppercase"
-              c="dimmed"
-              fw={700}
-              size="xs"
+              // c="dimmed"
+              w="fit-content"
+              c={titleObj?.style?.font?.color || "dimmed"}
+              fw={titleObj?.style?.font?.weight}
+              style={{ backgroundColor: titleObj?.style?.backgroundColor }}
+              size={titleObj?.style?.font?.size || "xs"}
               id={titleObj?.id}
             >
               {titleObj?.content?.value}
             </Text>
           ) : null}
           {descObj?.display === "block" ? (
-            <Text mt="xs" id={descObj?.id}>
+            <Text
+              mt="xs"
+              id={descObj?.id}
+              c={descObj?.style?.font?.color}
+              fw={descObj?.style?.font?.weight}
+              style={{ backgroundColor: descObj?.style?.backgroundColor }}
+              size={descObj?.style?.font?.size}
+            >
               {descObj?.content?.value}
             </Text>
           ) : null}
           {nameObj?.display === "block" ? (
             <Box wrap="nowrap" gap="xs" mt="md">
-              <Text size="sm" fw={500} id={nameObj?.id}>
+              <Text
+                id={nameObj?.id}
+                c={nameObj?.style?.font?.color}
+                fw={nameObj?.style?.font?.weight || 500}
+                style={{ backgroundColor: nameObj?.style?.backgroundColor }}
+                size={nameObj?.style?.font?.size || "sm"}
+                w="fit-content"
+              >
                 {nameObj?.content?.value}
               </Text>
               {authorSubtitle?.display === "block" ? (
-                <Text c="dimmed" fz="xs">
+                <Text
+                  id={authorSubtitle?.id}
+                  c={authorSubtitle?.style?.font?.color || "dimmed"}
+                  fw={authorSubtitle?.style?.font?.weight || 500}
+                  style={{
+                    backgroundColor: authorSubtitle?.style?.backgroundColor,
+                  }}
+                  size={authorSubtitle?.style?.font?.size || "xs"}
+                  w="fit-content"
+                >
                   {authorSubtitle?.content?.value}
                 </Text>
               ) : null}
